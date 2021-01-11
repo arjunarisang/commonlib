@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib;
+package io.github.arjunarisang.commonlib;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
