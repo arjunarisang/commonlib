@@ -103,6 +103,10 @@
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <sslAllowAll>true</sslAllowAll>
+                    <stagingProgressPauseDurationSeconds>20</stagingProgressPauseDurationSeconds>
+                    <stagingProgressTimeoutMinutes>20</stagingProgressTimeoutMinutes>
+                    <detectBuildFailures>true</detectBuildFailures>
                 </configuration>
             </plugin>
             <plugin>
