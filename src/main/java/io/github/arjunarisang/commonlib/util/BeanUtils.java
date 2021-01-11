@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.util;
+package io.github.arjunarisang.commonlib.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

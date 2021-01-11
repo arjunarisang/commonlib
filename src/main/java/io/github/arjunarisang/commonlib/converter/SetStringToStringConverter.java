@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.converter;
+package io.github.arjunarisang.commonlib.converter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Sets;

@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.arjunarisang</groupId>
     <artifactId>commonlib</artifactId>
-    <version>1.0.0-2.3.5-RELEASE</version>
+    <version>1.0.1-2.3.5-RELEASE</version>
     <name>commonlib</name>
     <description>KLC2 Common Library</description>
 

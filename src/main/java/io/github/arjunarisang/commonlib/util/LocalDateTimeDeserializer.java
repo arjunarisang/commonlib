@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.util;
+package io.github.arjunarisang.commonlib.util;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

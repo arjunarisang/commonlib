@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.util;
+package io.github.arjunarisang.commonlib.util;
 
 import com.github.slugify.Slugify;
 import lombok.NonNull;

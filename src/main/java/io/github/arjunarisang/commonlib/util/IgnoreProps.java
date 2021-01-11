@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.util;
+package io.github.arjunarisang.commonlib.util;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;

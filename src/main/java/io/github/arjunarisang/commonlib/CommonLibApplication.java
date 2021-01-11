@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib;
+package io.github.arjunarisang.commonlib;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

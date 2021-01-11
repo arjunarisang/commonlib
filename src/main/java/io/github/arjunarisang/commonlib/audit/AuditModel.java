@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.audit;
+package io.github.arjunarisang.commonlib.audit;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedBy;

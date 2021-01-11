@@ -1,4 +1,4 @@
-package id.go.kemenkeu.bppk.commonlib.exception;
+package io.github.arjunarisang.commonlib.exception;
 
 public class EntityNotFoundException extends RuntimeException {
     public EntityNotFoundException() {
