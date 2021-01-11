@@ -1,6 +1,5 @@
 package id.go.kemenkeu.bppk.commonlib.converter;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.persistence.AttributeConverter;
@@ -8,7 +7,6 @@ import javax.persistence.Converter;
 import java.util.HashSet;
 import java.util.Set;
 
-@Slf4j
 @Converter
 public class SetIntegerToStringConverter implements AttributeConverter<Set<Integer>, String> {
 

@@ -1,6 +1,5 @@
 package id.go.kemenkeu.bppk.commonlib.converter;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.persistence.AttributeConverter;
@@ -9,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Slf4j
 @Converter
 public class ListStringToStringConverter implements AttributeConverter<List<String>, String> {
 

@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.arjunarisang</groupId>
     <artifactId>commonlib</artifactId>
-    <version>1.0.0-2.3.5-SNAPSHOT</version>
+    <version>1.0.0-2.3.5-RELEASE</version>
     <name>commonlib</name>
     <description>KLC2 Common Library</description>
 
@@ -20,6 +20,7 @@
         <guava.version>30.0-jre</guava.version>
         <jackson-databind.version>2.11.3</jackson-databind.version>
         <javax-persistence.version>2.2</javax-persistence.version>
+        <slugify.version>2.4</slugify.version>
     </properties>
 
     <dependencies>
@@ -32,6 +33,11 @@
             <artifactId>spring-data-commons</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.slugify</groupId>
+            <artifactId>slugify</artifactId>
+            <version>${slugify.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
