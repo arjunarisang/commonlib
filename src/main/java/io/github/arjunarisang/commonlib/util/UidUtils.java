@@ -1,11 +1,12 @@
 package io.github.arjunarisang.commonlib.util;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 
 import java.util.UUID;
 
-@Slf4j
 public class UidUtils {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(UidUtils.class);
 
     public UidUtils() {
         log.error("Error! Trying to create UidUtils instances.");

@@ -2,10 +2,11 @@ package io.github.arjunarisang.commonlib.util;
 
 import com.github.slugify.Slugify;
 import lombok.NonNull;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 
-@Slf4j
 public class SlugUtils {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(SlugUtils.class);
 
     public SlugUtils() {
         log.error("Error! Trying to create SlugUtils instances.");

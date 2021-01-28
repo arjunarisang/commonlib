@@ -1,13 +1,14 @@
 package io.github.arjunarisang.commonlib.util;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-@Slf4j
 public class DateUtils {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(DateUtils.class);
 
     public DateUtils() {
         log.error("Error! Trying to create DateUtils instances.");

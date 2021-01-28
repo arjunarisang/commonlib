@@ -1,14 +1,17 @@
 package io.github.arjunarisang.commonlib.util;
 
-import com.google.common.collect.Lists;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-@Slf4j
 public class IgnoreProps {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(IgnoreProps.class);
 
     public IgnoreProps() {
         log.error("Error! Trying to create IgnoreProps instances.");
@@ -38,9 +41,8 @@ public class IgnoreProps {
 
     public static Object nullify(Object source, String... propsToNullify) {
         final BeanWrapper src = new BeanWrapperImpl(source);
-        List<String> props = new ArrayList<>(Arrays.asList(propsToNullify));
 
-        for (String prop : props) {
+        for (String prop : propsToNullify) {
             src.setPropertyValue(prop, null);
         }
 
@@ -48,7 +50,7 @@ public class IgnoreProps {
     }
 
     public static String[] addPropsToIgnore(String[] source, String... propsToIgnore) {
-        List<String> sourceList = Lists.newArrayList(source);
+        List<String> sourceList = Arrays.asList(source);
         sourceList.addAll(Arrays.asList(propsToIgnore));
 
         String[] finalIgnored = new String[sourceList.size()];
