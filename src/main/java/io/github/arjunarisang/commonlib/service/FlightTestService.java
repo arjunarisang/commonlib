@@ -1,9 +1,9 @@
-package io.github.arjunarisang.commonlib.autoconfig;
+package io.github.arjunarisang.commonlib.service;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class TestService {
+public class FlightTestService {
 
     public Map<String, String> hello() {
         Map<String, String> message = new HashMap<>();

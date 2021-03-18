@@ -2,7 +2,7 @@ package io.github.arjunarisang.commonlib.exception;
 
 public class BadRequestException extends RuntimeException {
     public BadRequestException() {
-        super();
+        super("Bad Request.");
     }
 
     public BadRequestException(String message) {

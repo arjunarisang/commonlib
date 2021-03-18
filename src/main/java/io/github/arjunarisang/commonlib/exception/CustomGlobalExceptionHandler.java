@@ -51,7 +51,7 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         return new ResponseEntity<>(body, headers, status);
     }
 
-    @ExceptionHandler(value = {EntityNotFoundException.class})
+    @ExceptionHandler(value = {EntityNotFoundException.class, javax.persistence.EntityNotFoundException.class})
     public ResponseEntity<Object> handleNotFoundException(RuntimeException ex, WebRequest request) {
         ErrorDetails errorDetails =
                 ErrorDetails
@@ -75,6 +75,32 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
                         .build();
 
         return handleExceptionInternal(ex, errorDetails, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+    }
+
+    @ExceptionHandler(value = {InternalServerErrorException.class})
+    public ResponseEntity<Object> handleInternalServerErrorException(RuntimeException ex, WebRequest request) {
+        ErrorDetails errorDetails =
+                ErrorDetails
+                        .builder()
+                        .timestamp(new Date())
+                        .message(ResponseUtils.invokeAntiXss(ex.getMessage()))
+                        .details(ResponseUtils.invokeAntiXss(request.getDescription(false)))
+                        .build();
+
+        return handleExceptionInternal(ex, errorDetails, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
+    }
+
+    @ExceptionHandler(value = {UnauthorizedException.class})
+    public ResponseEntity<Object> handleUnauthorizedException(RuntimeException ex, WebRequest request) {
+        ErrorDetails errorDetails =
+                ErrorDetails
+                        .builder()
+                        .timestamp(new Date())
+                        .message(ResponseUtils.invokeAntiXss(ex.getMessage()))
+                        .details(ResponseUtils.invokeAntiXss(request.getDescription(false)))
+                        .build();
+
+        return handleExceptionInternal(ex, errorDetails, new HttpHeaders(), HttpStatus.UNAUTHORIZED, request);
     }
 
     @ExceptionHandler(value = {RuntimeException.class})

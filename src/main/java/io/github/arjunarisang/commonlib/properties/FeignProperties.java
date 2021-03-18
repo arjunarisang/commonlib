@@ -13,6 +13,7 @@ public class FeignProperties {
 
     public static final class Feign {
         private boolean enabled = false;
+        private String mofServiceUri = "https://localhost:8443";
 
         public Feign() {
         }
@@ -21,8 +22,16 @@ public class FeignProperties {
             return this.enabled;
         }
 
+        public String getMofServiceUri() {
+            return this.mofServiceUri;
+        }
+
         public void setEnabled(boolean enabled) {
             this.enabled = enabled;
+        }
+
+        public void setMofServiceUri(String mofServiceUri) {
+            this.mofServiceUri = mofServiceUri;
         }
 
         public boolean equals(final Object o) {
@@ -30,6 +39,10 @@ public class FeignProperties {
             if (!(o instanceof Feign)) return false;
             final Feign other = (Feign) o;
             if (this.isEnabled() != other.isEnabled()) return false;
+            final Object this$mofServiceUri = this.getMofServiceUri();
+            final Object other$mofServiceUri = other.getMofServiceUri();
+            if (this$mofServiceUri == null ? other$mofServiceUri != null : !this$mofServiceUri.equals(other$mofServiceUri))
+                return false;
             return true;
         }
 
@@ -37,11 +50,13 @@ public class FeignProperties {
             final int PRIME = 59;
             int result = 1;
             result = result * PRIME + (this.isEnabled() ? 79 : 97);
+            final Object $mofServiceUri = this.getMofServiceUri();
+            result = result * PRIME + ($mofServiceUri == null ? 43 : $mofServiceUri.hashCode());
             return result;
         }
 
         public String toString() {
-            return "FeignProperties.Feign(enabled=" + this.isEnabled() + ")";
+            return "FeignProperties.Feign(enabled=" + this.isEnabled() + ", mofServiceUri=" + this.getMofServiceUri() + ")";
         }
     }
 }

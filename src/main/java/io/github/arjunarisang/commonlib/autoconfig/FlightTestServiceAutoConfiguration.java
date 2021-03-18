@@ -1,19 +1,20 @@
 package io.github.arjunarisang.commonlib.autoconfig;
 
+import io.github.arjunarisang.commonlib.service.FlightTestService;
 import org.slf4j.Logger;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class TestServiceAutoConfiguration {
+public class FlightTestServiceAutoConfiguration {
 
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(ExceptionAutoConfiguration.class);
 
-    @ConditionalOnMissingBean(TestService.class)
+    @ConditionalOnMissingBean(FlightTestService.class)
     @Bean
-    TestService testService() {
+    FlightTestService testService() {
         log.info("TestService initialized.");
-        return new TestService();
+        return new FlightTestService();
     }
 }

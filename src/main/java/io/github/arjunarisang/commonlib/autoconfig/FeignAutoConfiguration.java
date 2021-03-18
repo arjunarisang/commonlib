@@ -7,13 +7,12 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@EnableFeignClients
-@ComponentScan
+@SuppressWarnings("ALL")
+@EnableFeignClients(basePackages = {"io.github.arjunarisang.commonlib", "id.go.kemenkeu.bppk"})
 @EnableConfigurationProperties({FeignProperties.class})
 @ConditionalOnProperty(name = "arjunarisang.commonlib.feign.enabled", havingValue = "true")
 @PropertySource(value = "classpath:commonlib-application.yaml", factory = YamlPropertySourceFactory.class)
