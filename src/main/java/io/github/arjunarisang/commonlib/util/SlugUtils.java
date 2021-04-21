@@ -33,8 +33,9 @@ public class SlugUtils {
         if (str.length() > 150) {
             str = string.substring(0, 150);
         }
+        String uid = UUID.randomUUID().toString().split("-")[0];
 
-        return slg.slugify(str).concat(UUID.randomUUID().toString());
+        return slg.slugify(str) + "-" + uid;
     }
 
 }
