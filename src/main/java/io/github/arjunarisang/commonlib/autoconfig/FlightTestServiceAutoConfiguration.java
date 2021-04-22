@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FlightTestServiceAutoConfiguration {
 
-    private static final Logger log = org.slf4j.LoggerFactory.getLogger(ExceptionAutoConfiguration.class);
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(ExceptionHandlerAutoConfiguration.class);
 
     @ConditionalOnMissingBean(FlightTestService.class)
     @Bean

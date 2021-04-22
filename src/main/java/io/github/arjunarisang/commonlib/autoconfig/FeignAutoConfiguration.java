@@ -1,7 +1,7 @@
 package io.github.arjunarisang.commonlib.autoconfig;
 
 import io.github.arjunarisang.commonlib.config.YamlPropertySourceFactory;
-import io.github.arjunarisang.commonlib.properties.FeignProperties;
+import io.github.arjunarisang.commonlib.properties.CommonlibProperties;
 import org.slf4j.Logger;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @SuppressWarnings("ALL")
 @EnableFeignClients(basePackages = {"io.github.arjunarisang.commonlib", "id.go.kemenkeu.bppk"})
-@EnableConfigurationProperties({FeignProperties.class})
+@EnableConfigurationProperties({CommonlibProperties.class})
 @ConditionalOnProperty(name = "arjunarisang.commonlib.feign.enabled", havingValue = "true")
 @PropertySource(value = "classpath:commonlib-application.yaml", factory = YamlPropertySourceFactory.class)
 public class FeignAutoConfiguration {
