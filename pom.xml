@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.arjunarisang</groupId>
     <artifactId>commonlib</artifactId>
-    <version>0.0.2-2.3.9-RELEASE</version>
+    <version>0.0.3-2.3.9-RELEASE</version>
     <name>commonlib</name>
     <description>KLC2 Common Library</description>
 
@@ -56,12 +56,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-        </dependency>-->
-        <!-- /spring cloud -->
-
         <!-- other -->
         <dependency>
             <groupId>com.github.slugify</groupId>

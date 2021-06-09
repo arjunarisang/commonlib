@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
+public class DefaultFullTextPage<T> implements FullTextPage<T>, Serializable {
 
     private static final long serialVersionUID = 6009180136294289135L;
 
@@ -26,7 +26,8 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
 
     private final Pageable pageable;
 
-    public SimpleFullTextPage(List<T> content, long total, Pageable pageable) {
+    public DefaultFullTextPage(List<T> content, long total,
+                               Pageable pageable) {
         Assert.notNull(content, "Content must not be null!");
         Assert.notNull(pageable, "Pageable must not be null!");
 
@@ -36,7 +37,7 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
         this.total = total;
     }
 
-    public SimpleFullTextPage(List<T> content, List<Map<String, Map<String, Long>>> facet, long total, Pageable pageable) {
+    public DefaultFullTextPage(List<T> content, List<Map<String, Map<String, Long>>> facet, long total, Pageable pageable) {
         Assert.notNull(content, "Content must not be null!");
         Assert.notNull(facet, "Facet must not be null!");
         Assert.notNull(pageable, "Pageable must not be null!");
@@ -48,7 +49,7 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
         this.total = total;
     }
 
-    public SimpleFullTextPage(List<T> content, List<Map<String, Map<String, Long>>> facet, long total, long durationMillis, Pageable pageable) {
+    public DefaultFullTextPage(List<T> content, List<Map<String, Map<String, Long>>> facet, long total, long durationMillis, Pageable pageable) {
         Assert.notNull(content, "Content must not be null!");
         Assert.notNull(facet, "Facet must not be null!");
         Assert.notNull(pageable, "Pageable must not be null!");
@@ -60,7 +61,7 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
         this.total = total;
     }
 
-    public SimpleFullTextPage(List<T> content, List<Map<String, Map<String, Long>>> facet, List<String> sortable, long total, long durationMillis, Pageable pageable) {
+    public DefaultFullTextPage(List<T> content, List<Map<String, Map<String, Long>>> facet, List<String> sortable, long total, long durationMillis, Pageable pageable) {
         Assert.notNull(content, "Content must not be null!");
         Assert.notNull(facet, "Facet must not be null!");
         Assert.notNull(pageable, "Pageable must not be null!");
@@ -139,8 +140,8 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
 
     public boolean equals(final Object o) {
         if (o == this) return true;
-        if (!(o instanceof SimpleFullTextPage)) return false;
-        final SimpleFullTextPage<?> other = (SimpleFullTextPage<?>) o;
+        if (!(o instanceof DefaultFullTextPage)) return false;
+        final DefaultFullTextPage<?> other = (DefaultFullTextPage<?>) o;
         if (!other.canEqual((Object) this)) return false;
         final Object this$content = this.getContent();
         final Object other$content = other.getContent();
@@ -160,7 +161,7 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
     }
 
     protected boolean canEqual(final Object other) {
-        return other instanceof SimpleFullTextPage;
+        return other instanceof DefaultFullTextPage;
     }
 
     public int hashCode() {
@@ -182,6 +183,6 @@ public class SimpleFullTextPage<T> implements FullTextPage<T>, Serializable {
     }
 
     public String toString() {
-        return "SimpleFullTextPage(content=" + this.getContent() + ", facet=" + this.getFacet() + ", sortable=" + this.getSortable() + ", durationMillis=" + this.getDurationMillis() + ", total=" + this.total + ", pageable=" + this.getPageable() + ")";
+        return "DefaultFullTextPage(content=" + this.getContent() + ", facet=" + this.getFacet() + ", sortable=" + this.getSortable() + ", durationMillis=" + this.getDurationMillis() + ", total=" + this.total + ", pageable=" + this.getPageable() + ")";
     }
 }
