@@ -1,5 +1,6 @@
 package io.github.arjunarisang.commonlib.util;
 
+import com.google.common.collect.Sets;
 import org.slf4j.Logger;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
@@ -24,9 +25,9 @@ public class IgnoreProps {
 
         Set<String> emptyNames = new HashSet<>();
         emptyNames.add("id");
-        emptyNames.add("createdDate");
+        emptyNames.add("createdAt");
         emptyNames.add("createdBy");
-        emptyNames.add("updatedDate");
+        emptyNames.add("updatedAt");
         emptyNames.add("updatedBy");
 
         for (java.beans.PropertyDescriptor pd : pds) {
@@ -50,8 +51,9 @@ public class IgnoreProps {
     }
 
     public static String[] addPropsToIgnore(String[] source, String... propsToIgnore) {
-        List<String> sourceList = Arrays.asList(source);
-        sourceList.addAll(Arrays.asList(propsToIgnore));
+        Set<String> sourceList = Sets.newHashSet(source);
+        Set<String> addition = Sets.newHashSet(propsToIgnore);
+        sourceList.addAll(addition);
 
         String[] finalIgnored = new String[sourceList.size()];
         sourceList.toArray(finalIgnored);

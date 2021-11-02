@@ -14,6 +14,7 @@ import java.util.List;
 public class StringUtils {
 
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(StringUtils.class);
+    private static final String USERNAME_REGEX = "^(?=.{8,60}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$";
 
     public StringUtils() {
         log.error("Error! Trying to create StringUtils instances.");

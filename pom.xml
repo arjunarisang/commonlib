@@ -10,9 +10,9 @@
     </parent>
     <groupId>io.github.arjunarisang</groupId>
     <artifactId>commonlib</artifactId>
-    <version>1.1.0-2.3.11-RELEASE</version>
+    <version>1.1.2-2.3.11-RELEASE</version>
     <name>commonlib</name>
-    <description>KLC2 Common Library</description>
+    <description>KLC2 Common Library by Unggul Hasan Muhammad</description>
 
     <properties>
         <java.version>1.8</java.version>
