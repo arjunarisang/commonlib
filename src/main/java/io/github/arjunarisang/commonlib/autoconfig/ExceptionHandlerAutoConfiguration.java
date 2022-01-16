@@ -20,7 +20,7 @@ public class ExceptionHandlerAutoConfiguration {
     @ConditionalOnMissingBean(annotation = ControllerAdvice.class)
     @Bean
     CustomGlobalExceptionHandler responseEntityExceptionHandler() {
-        log.info("ExceptionHandlerAutoConfiguration initialized.");
+        log.info("UnggulHasan - ExceptionHandlerAutoConfiguration initialized.");
         return new CustomGlobalExceptionHandler();
     }
 }

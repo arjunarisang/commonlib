@@ -1,3 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.arjunarisang.commonlib.autoconfig.ExceptionHandlerAutoConfiguration,\
-io.github.arjunarisang.commonlib.autoconfig.FeignAutoConfiguration
+io.github.arjunarisang.commonlib.autoconfig.ExceptionHandlerAutoConfiguration
