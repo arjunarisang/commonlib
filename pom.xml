@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.arjunarisang</groupId>
     <artifactId>commonlib</artifactId>
-    <version>1.1.4-2.5.8-RELEASE</version>
+    <version>1.1.5-2.5.8-RELEASE</version>
     <name>commonlib</name>
     <description>KLC2 Common Library by Unggul Hasan Muhammad</description>
 
@@ -25,6 +25,13 @@
     </properties>
 
     <dependencies>
+        <!--validation-->
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <!--/validation-->
         <!-- spring boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -6,13 +6,14 @@ public enum AuthProvider {
 
     GOOGLE("GOOGLE"),
     KEMENKEU("KEMENKEU"),
+    KEMENKEU_PUBLIC("KEMENKEU_PUBLIC"),
     LOCAL("LOCAL"),
     KEYCLOAK("KEYCLOAK");
 
     @JsonValue
     private String authProvider;
 
-    private AuthProvider(String authProvider) {
+    AuthProvider(String authProvider) {
         this.authProvider = authProvider;
     }
 
